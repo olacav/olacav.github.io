@@ -1,31 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>OLACAV Games</title>
-  <meta name="description" content="Music + Gaming. Why not?">
-  <meta name="author" content="OLACAV">
+  <title>OLACAV Games — Estúdio de Jogos Indie</title>
+  <meta name="description" content="OLACAV Games é um estúdio independente de desenvolvimento de jogos, criador do puzzle-platformer 2D SpinWhisker.">
+  <meta name="author" content="OLACAV Games">
   <meta name="color-scheme" content="dark">
-  <meta name="theme-color" content="#04060a">
+  <meta name="theme-color" content="#08040a">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://olacav.github.io">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="OLACAV Games">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:title" content="OLACAV Games">
-  <meta property="og:description" content="Music + Gaming. Why not?">
-  <meta property="og:url" content="https://olacav.github.io">
-  <meta property="og:image" content="https://aleemshahad.github.io/portfolio/assets/images/og.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="OLACAV Games — Estúdio de Jogos Indie">
+  <meta property="og:description" content="Desenvolvendo experiências indie com identidade própria. Conheça SpinWhisker.">
+  <meta property="og:image" content="assets/images/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Aleem Shahzad — Nexus Automation">
+  <meta property="og:image:alt" content="OLACAV Games">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Writing — Aleem Shahzad / Nexus Automation">
-  <meta name="twitter:description" content="Notes in progress on technical SEO, Python automation, trading systems and AI-assisted content pipelines.">
-  <meta name="twitter:image" content="https://aleemshahad.github.io/portfolio/assets/images/og.png">
+  <meta name="twitter:title" content="OLACAV Games — Estúdio de Jogos Indie">
+  <meta name="twitter:description" content="Desenvolvendo experiências indie com identidade própria. Conheça SpinWhisker.">
+  <meta name="twitter:image" content="assets/images/og.png">
 
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="favicon.ico" sizes="32x32">
@@ -37,12 +35,159 @@
 
   <link rel="stylesheet" href="assets/css/site.css">
 
+  <style>
+    :root {
+      /* Roxo rosado / vinho como cor de destaque */
+      --accent: #c83e78;
+      --accent-hover: #e0528e;
+      --accent-soft: rgba(200, 62, 120, 0.16);
+      --accent-border: rgba(200, 62, 120, 0.42);
+      --bg-wine: #0b050d;
+    }
+
+    body {
+      background-color: var(--bg-wine);
+    }
+
+    /* Ajustes de destaque sobre o site.css original */
+    .brand__mark {
+      background: linear-gradient(135deg, #9d2359, #d64b8a);
+      color: #fff;
+      border-color: var(--accent-border);
+    }
+
+    .eyebrow,
+    .project__lang,
+    .link-arrow {
+      color: var(--accent-hover);
+    }
+
+    .btn {
+      background-color: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .btn:hover {
+      background-color: var(--accent-hover);
+      border-color: var(--accent-hover);
+    }
+
+    /* Banner clicável do SpinWhisker */
+    .game-banner {
+      display: block;
+      position: relative;
+      text-decoration: none;
+      color: inherit;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--accent-border);
+      background:
+        radial-gradient(circle at 85% 20%, rgba(200, 62, 120, 0.28), transparent 55%),
+        linear-gradient(145deg, #16091a 0%, #0d0610 100%);
+      padding: clamp(1.75rem, 4vw, 3rem);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .game-banner:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-hover);
+      box-shadow: 0 18px 42px -12px rgba(200, 62, 120, 0.35);
+    }
+
+    .game-banner__badge {
+      display: inline-block;
+      font-family: "JetBrainsMono", monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      color: #f38ab8;
+      margin-bottom: 1.25rem;
+    }
+
+    .game-banner__grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .game-banner__title {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      line-height: 1.05;
+      margin: 0 0 0.85rem;
+      letter-spacing: -0.02em;
+    }
+
+    .game-banner__desc {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      opacity: 0.86;
+      max-width: 52ch;
+      margin: 0 0 1.5rem;
+    }
+
+    .game-banner__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      color: #f38ab8;
+    }
+
+    .game-banner__cta svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.2s ease;
+    }
+
+    .game-banner:hover .game-banner__cta svg {
+      transform: translateX(4px);
+    }
+
+    .game-banner__art {
+      aspect-ratio: 16 / 10;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .game-banner__art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .studio-logo-wrap {
+      margin-bottom: 1.5rem;
+    }
+
+    .studio-logo-wrap img {
+      max-height: 72px;
+      width: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .game-banner__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
   <script defer src="assets/vendor/gsap.min.js"></script>
   <script defer src="assets/vendor/ScrollTrigger.min.js"></script>
 
   <script>
-    /* Same contract as the homepage: stamp the motion flag before first
-       paint, then drop it if the app never boots. */
     (function () {
       var root = document.documentElement;
       if (!window.matchMedia || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -62,202 +207,104 @@
     <symbol id="i-ext" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M9.5 2.5h4v4M13.5 2.5 7.75 8.25M12 8.75v4.75H3.25V4.75H8"/></symbol>
     <symbol id="i-menu" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M2 4.5h12M2 8h12M2 11.5h12"/></symbol>
     <symbol id="i-close" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="m4 4 8 8M12 4l-8 8"/></symbol>
-    <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
   </svg>
 
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
 
   <!-- ── header ─────────────────────────────────────────────── -->
   <header class="site-header" data-header>
-    <a class="brand" href="index.html" aria-label="Nexus Automation — home">
-      <span class="brand__mark" aria-hidden="true">AS</span>
-      <span class="brand__name">Nexus Automation</span>
+    <a class="brand" href="index.html" aria-label="OLACAV Games — início">
+      <span class="brand__mark" aria-hidden="true">OG</span>
+      <span class="brand__name">OLACAV Games</span>
     </a>
 
-    <nav class="site-nav" aria-label="Primary">
+    <nav class="site-nav" aria-label="Navegação principal">
       <ul>
-        <li><a href="index.html#metrics">Numbers</a></li>
-        <li><a href="index.html#capabilities">Capabilities</a></li>
-        <li><a href="index.html#work">Work</a></li>
-        <li><a href="blog.html" aria-current="page">Writing</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="index.html" aria-current="page">Início</a></li>
+        <li><a href="#jogos">Jogos</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
 
     <div class="header__end">
-      <a class="icon-btn" href="https://github.com/aleemshahad" target="_blank" rel="noopener" aria-label="GitHub profile (opens in a new tab)"><svg aria-hidden="true"><use href="#i-github"/></svg></a>
-      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Open menu" data-menu-toggle><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Abrir menu" data-menu-toggle><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
   </header>
 
   <!-- ── mobile sheet ───────────────────────────────────────── -->
   <div class="sheet" id="sheet" data-sheet>
-    <button class="icon-btn sheet__close" type="button" aria-label="Close menu" data-menu-close><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+    <button class="icon-btn sheet__close" type="button" aria-label="Fechar menu" data-menu-close><svg aria-hidden="true"><use href="#i-close"/></svg></button>
     <nav aria-label="Mobile">
       <ul>
-        <li><a href="index.html#metrics"><span>01</span>Numbers</a></li>
-        <li><a href="index.html#capabilities"><span>02</span>Capabilities</a></li>
-        <li><a href="index.html#work"><span>03</span>Work</a></li>
-        <li><a href="blog.html" aria-current="page"><span>04</span>Writing</a></li>
-        <li><a href="index.html#contact"><span>05</span>Contact</a></li>
+        <li><a href="index.html" aria-current="page"><span>01</span>Início</a></li>
+        <li><a href="#jogos"><span>02</span>Jogos</a></li>
+        <li><a href="#contato"><span>03</span>Contato</a></li>
       </ul>
     </nav>
     <div class="sheet__foot">
-      <a class="link" href="mailto:aleemssg@gmail.com">aleemssg@gmail.com</a>
-      <a class="link" href="https://github.com/aleemshahad" target="_blank" rel="noopener">github.com/aleemshahad</a>
+      <a class="link" href="mailto:contato@olacavgames.com">contato@olacavgames.com</a>
     </div>
   </div>
 
   <main id="main">
 
-    <!-- ══ WRITING ═══════════════════════════════════════════ -->
-    <section class="section" aria-labelledby="writing-title">
+    <!-- ══ HERO / ESTÚDIO ════════════════════════════════════ -->
+    <section class="section" aria-labelledby="studio-title">
       <div class="wrap">
         <header class="sec-head">
-          <p class="eyebrow">04 &middot; Writing</p>
-          <h1 class="sec-title sec-head__title" id="writing-title">Notes from inside the build.</h1>
+          <div class="studio-logo-wrap">
+            <!-- Substitua o src pelo caminho real do logotipo da OLACAV Games -->
+            <img src="assets/images/olacav-logo.png" alt="Logotipo OLACAV Games" onerror="this.style.display='none'">
+          </div>
+          <p class="eyebrow">Estúdio Independente</p>
+          <h1 class="sec-title sec-head__title" id="studio-title">OLACAV Games</h1>
           <p class="lede sec-head__lede">
-            Seven pieces are drafted and not yet published — no post is listed here until it
-            actually ships. Each one is a working note from a real system rather than a listicle.
+            Criando jogos indie autorais com foco em mecânicas criativas, desafios inteligentes e identidade visual marcante.
           </p>
         </header>
-
-        <div class="projects projects--notes">
-
-          <!-- No card is featured: a 2x2 featured cell on a page whose
-               cards carry three lines of copy leaves a 300px hole, and
-               these notes are peers — none of them is the lead. -->
-          <article class="project rise">
-            <div class="project__top">
-              <span class="project__lang">AI &amp; Automation</span>
-              <span>draft</span>
-            </div>
-            <h2 class="project__name">How AI Automation is Revolutionizing Digital Marketing</h2>
-            <p class="project__desc">
-              How artificial intelligence and automation change the economics of digital
-              marketing — chatbots, predictive analytics, and where the ROI actually comes from
-              once the manual work is gone.
-            </p>
-            <div class="project__foot">
-              <span class="project__meta">AI &middot; Automation &middot; Marketing</span>
-              <span class="project__links">not published yet</span>
-            </div>
-          </article>
-
-          <article class="project rise">
-            <div class="project__top">
-              <span class="project__lang">Trading</span>
-              <span>draft</span>
-            </div>
-            <h2 class="project__name">Turning $10 into $100 — My Trading Journey</h2>
-            <p class="project__desc">
-              A personal record of a forex account, the sizing and risk rules that held up, and
-              the strategies that produced consistent results instead of one lucky week.
-            </p>
-            <div class="project__foot">
-              <span class="project__meta">Trading &middot; Forex &middot; Strategy</span>
-              <span class="project__links">not published yet</span>
-            </div>
-          </article>
-
-          <article class="project rise">
-            <div class="project__top">
-              <span class="project__lang">Python</span>
-              <span>draft</span>
-            </div>
-            <h2 class="project__name">Building Smart Python Bots for Forex Trading</h2>
-            <p class="project__desc">
-              A practical build guide: MT5 integration, grid strategies, event-driven bots and
-              the failure modes that only show up against live market data.
-            </p>
-            <div class="project__foot">
-              <span class="project__meta">Python &middot; Trading Bots &middot; Automation</span>
-              <span class="project__links">not published yet</span>
-            </div>
-          </article>
-
-          <article class="project rise">
-            <div class="project__top">
-              <span class="project__lang">Systems</span>
-              <span>draft</span>
-            </div>
-            <h2 class="project__name">Start a New Trading Journal</h2>
-            <p class="project__desc">
-              The tooling behind a trading setup — MT5 automation, logging, and AI-assisted
-              market research, wired into one workflow.
-            </p>
-            <div class="project__foot">
-              <span class="project__meta">Systems &middot; AI</span>
-              <span class="project__links">not published yet</span>
-            </div>
-          </article>
-
-          <article class="project rise">
-            <div class="project__top">
-              <span class="project__lang">SEO</span>
-              <span>draft</span>
-            </div>
-            <h2 class="project__name">Advanced SEO Techniques</h2>
-            <p class="project__desc">
-              Technical, content and off-page work that still moves rankings after the recent
-              algorithm updates — including what stopped working.
-            </p>
-            <div class="project__foot">
-              <span class="project__meta">SEO &middot; Google &middot; Rankings</span>
-              <span class="project__links">not published yet</span>
-            </div>
-          </article>
-
-          <article class="project rise">
-            <div class="project__top">
-              <span class="project__lang">Guest Posting</span>
-              <span>draft</span>
-            </div>
-            <h2 class="project__name">Automating Audience Research</h2>
-            <p class="project__desc">
-              Guest posting at scale — how outreach, publisher research and content strategy
-              combine into backlinks that actually get placed.
-            </p>
-            <div class="project__foot">
-              <span class="project__meta">Guest Posting &middot; Backlinks</span>
-              <span class="project__links">not published yet</span>
-            </div>
-          </article>
-
-          <article class="project rise">
-            <div class="project__top">
-              <span class="project__lang">Mobile SEO</span>
-              <span>draft</span>
-            </div>
-            <h2 class="project__name">Mobile-First SEO: The Future of Search</h2>
-            <p class="project__desc">
-              What mobile-first indexing actually rewards, and the performance and UX work that
-              has to happen before the content is even evaluated.
-            </p>
-            <div class="project__foot">
-              <span class="project__meta">Mobile SEO &middot; UX &middot; Performance</span>
-              <span class="project__links">not published yet</span>
-            </div>
-          </article>
-
-        </div>
       </div>
     </section>
 
-    <!-- ══ CLOSING ═══════════════════════════════════════════ -->
-    <section class="section section--ground" aria-labelledby="writing-cta">
+    <!-- ══ BANNER DO JOGO ════════════════════════════════════ -->
+    <section class="section" id="jogos" aria-labelledby="games-title" style="padding-top: 0;">
+      <div class="wrap">
+        <p class="eyebrow" id="games-title" style="margin-bottom: 1rem;">Lançamento</p>
+
+        <a class="game-banner rise" href="spinwhisker.html" aria-label="Acessar página do jogo SpinWhisker">
+          <div class="game-banner__grid">
+            <div>
+              <span class="game-banner__badge">Disponível Agora &middot; Puzzle-Platformer 2D</span>
+              <h2 class="game-banner__title">SpinWhisker</h2>
+              <p class="game-banner__desc">
+                Assuma o controle de um gato ágil e use raciocínio rápido para superar obstáculos e escapar de cada sala.
+              </p>
+              <span class="game-banner__cta">
+                Ver página do jogo
+                <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+              </span>
+            </div>
+
+            <div class="game-banner__art">
+              <!-- Coloque aqui a arte/capa promocional do SpinWhisker -->
+              <img src="assets/images/spinwhisker-banner.png" alt="Arte promocional de SpinWhisker" onerror="this.outerHTML='<span style=&quot;font-family:JetBrainsMono,monospace;font-size:0.85rem;opacity:0.55;&quot;>[ Banner SpinWhisker ]</span>'">
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ══ CONTATO SIMPLES ═══════════════════════════════════ -->
+    <section class="section section--ground" id="contato" aria-labelledby="contact-title">
       <div class="wrap">
         <header class="sec-head">
-          <p class="eyebrow">Ship</p>
-          <h2 class="sec-title sec-head__title" id="writing-cta">Want one of these written for your stack?</h2>
+          <p class="eyebrow">Contato</p>
+          <h2 class="sec-title sec-head__title" id="contact-title">Fale com o estúdio.</h2>
           <p class="lede sec-head__lede">
-            These notes come out of live client systems. If you have a problem worth documenting,
-            it is probably worth automating first.
+            Para imprensa, parcerias ou suporte sobre nossos jogos, entre em contato pelo e-mail oficial.
           </p>
         </header>
         <p class="contact__alt rise">
-          <a class="btn" href="index.html#contact">Open a channel <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <a class="link-arrow" href="https://github.com/aleemshahad" target="_blank" rel="noopener">Read the code instead <svg aria-hidden="true"><use href="#i-ext"/></svg></a>
+          <a class="btn" href="mailto:contato@olacavgames.com">Enviar e-mail <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </p>
       </div>
     </section>
@@ -267,12 +314,10 @@
   <!-- ── footer ─────────────────────────────────────────────── -->
   <footer class="site-footer">
     <div class="wrap">
-      <p>&copy; <span data-year>2026</span> Aleem Shahzad — Nexus Automation</p>
-      <nav class="site-footer__links" aria-label="Social">
-        <a href="https://github.com/aleemshahad" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://x.com/ALEEMSHAHZAD2" target="_blank" rel="noopener">X</a>
-        <a href="https://www.linkedin.com/in/aleemshahad" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="index.html">Home</a>
+      <p>&copy; <span data-year>2026</span> OLACAV Games. Todos os direitos reservados.</p>
+      <nav class="site-footer__links" aria-label="Links">
+        <a href="spinwhisker.html">SpinWhisker</a>
+        <a href="index.html">Início</a>
       </nav>
     </div>
   </footer>
